@@ -16,8 +16,8 @@ namespace WorkshopLong_Azure
         public Form1()
         {
             InitializeComponent();
-            //var config = SpeechConfig.FromSubscription("5a9e0d42e58545c997c9d85fd51f413f", "japaneast");
-            var config = SpeechConfig.FromSubscription("93f21ea575fc42eba2dcf29285dd3190", "japaneast");
+            //var config = SpeechConfig.FromSubscription("*******************", "japaneast");
+            var config = SpeechConfig.FromSubscription("********************", "japaneast");
 
             config.EnableDictation();
             config.SpeechRecognitionLanguage = "ja-JP";
@@ -134,8 +134,8 @@ namespace WorkshopLong_Azure
         
         static void submitsentence(string sentence)
         {
-            string constr = @"Data Source=sfws.c7t5mjpl9wt1.ap-northeast-1.rds.amazonaws.com,1433;
-                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=SSD;Password=lcopLCOP";
+            string constr = @"Data Source=***************.rds.amazonaws.com,1433;
+                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=*****;Password=*******";
 
 
 
@@ -176,16 +176,10 @@ namespace WorkshopLong_Azure
 
         static void submitdata(double time)
         {
-            //string constr = @"Data Source=fe80::f8ad:a765:a2fa:5fcf%12,1433;Initial Catalog=Test;Connect Timeout=2;Persist Security Info=True;User ID=ssd;Password=lcop";
-            //121.87.109.100\SQLEXPRESS,1433
-
-            //string constr = @"Data Source=ssdlab.cruxuvlbhlee.us-east-2.rds.amazonaws.com,1433;
-            //                    Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=ssd;Password=lcoplcop";
             
             
-            
-            string constr = @"Data Source=sfws.c7t5mjpl9wt1.ap-northeast-1.rds.amazonaws.com,1433;
-                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=SSD;Password=lcopLCOP";
+            string constr = @"Data Source=*************.rds.amazonaws.com,1433;
+                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=*****;Password=*****";
 
 
 
@@ -249,8 +243,8 @@ namespace WorkshopLong_Azure
 
         static void GetTableCatalog()
         {
-            string constr = @"Data Source=sfws.c7t5mjpl9wt1.ap-northeast-1.rds.amazonaws.com,1433;
-                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=SSD;Password=lcopLCOP";
+            string constr = @"Data Source=*********.rds.amazonaws.com,1433;
+                                Initial Catalog=Workshop;Connect Timeout=20;Persist Security Info=True;User ID=******;Password=********";
             // コネクションを生成します。
             using (var connection = new SqlConnection(constr))
                 try
